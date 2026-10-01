@@ -27,6 +27,10 @@ const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 
 const app = express();
+
+// Railway reverse proxy support
+app.set('trust proxy', 1);
+
 const server = http.createServer(app);
 
 const allowedOrigins = [
